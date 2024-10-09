@@ -1,7 +1,8 @@
+// my-app/src/stories/test/upload.stories.ts
 import Upload from './upload.svelte';
 
 export default {
-  title: 'Test/Upload',
+  title: 'Components/Upload',
   component: Upload,
 };
 
@@ -11,4 +12,6 @@ const Template = (args) => ({
 });
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+  // Add any default props if needed
+};

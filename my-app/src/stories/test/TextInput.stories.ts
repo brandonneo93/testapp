@@ -1,7 +1,7 @@
 import TextInput from './TextInput.svelte';
 
 export default {
-  title: 'Form/TextInput',
+  title: 'Components/TextInput',
   component: TextInput,
 };
 

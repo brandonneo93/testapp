@@ -1,4 +1,5 @@
 import type { StorybookConfig } from "@storybook/svelte-vite";
+import { resolve } from "path";
 
 const config: StorybookConfig = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|ts|svelte)"],
@@ -17,6 +18,15 @@ const config: StorybookConfig = {
     options: {},
   },
 
+  viteFinal: (config) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      $lib: resolve(__dirname, '../src/lib'),
+    };
+    return config;
+  },
+
   docs: {}
 };
+
 export default config;
